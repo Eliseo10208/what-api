@@ -26,19 +26,19 @@ startSock().then(connection => {
                         console.log('Message content:', messageContent);
 
                         // Realiza una solicitud POST a la URL especificada con el contenido del mensaje
-                        try {
-                            const response = await preguntarIA(messageContent);
-                            console.log('Response from external API:', response);
+                        // try {
+                        //     // const response = await preguntarIA(messageContent);
+                        //     console.log('Response from external API:', response);
 
-                            if (typeof response === 'string') {
-                                const sentMsg = await sockInstance.sendMessage(msg.key.remoteJid!, { text: response });
-                                console.log('Message sent:', sentMsg);
-                            } else {
-                                console.error('Response from external API is not a string:', response);
-                            }
-                        } catch (error) {
-                            console.error('Error posting data to external API:', error);
-                        }
+                        //     if (typeof response === 'string') {
+                        //         const sentMsg = await sockInstance.sendMessage(msg.key.remoteJid!, { text: response });
+                        //         console.log('Message sent:', sentMsg);
+                        //     } else {
+                        //         console.error('Response from external API is not a string:', response);
+                        //     }
+                        // } catch (error) {
+                        //     console.error('Error posting data to external API:', error);
+                        // }
                     } else {
                         console.error('Received message content is not a string:', messageContent);
                     }
