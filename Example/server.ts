@@ -1,6 +1,6 @@
  import express, { Request, Response, Application } from 'express';
 import { startSock, sock } from './example'; // Asegúrate de que la ruta a 'example' es correcta
-import { preguntarIA } from './Api'; // Importa la función desde 'api.ts'
+// import { preguntarIA } from './Api'; // Importa la función desde 'api.ts'
 import path from 'path';
 import fs from 'fs';
 import multer from 'multer';
